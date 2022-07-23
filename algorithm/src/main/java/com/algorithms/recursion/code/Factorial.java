@@ -1,4 +1,4 @@
-package com.algorithms.recursion.code.recursion;
+package com.algorithms.recursion.code;
 
 public class Factorial {
     public static int factorial(int num){
