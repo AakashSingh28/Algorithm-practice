@@ -1,6 +1,6 @@
-package com.algorithms.recursion.code;
+package com.algorithms.recursion.code.recursion;
 
-public class Recursion {
+public class Factorial {
     public static int factorial(int num){
         if (num < 0){
             return -1;
