@@ -5,10 +5,17 @@ public class DecimalToBinary {
 
 
     private static int decimalToBinary(int num){
-        if(num==0){
+       /* if(num==0){
+            return 0;
+        }*/
+        return num==0?0:num%2+10*decimalToBinary(num/2);
+    }
+   static int count=0;
+    private static double binaryToDecimal(int binary){
+        if(binary==0){
             return 0;
         }
-        return num%2+10*decimalToBinary(num/2);
+        return binary%10*Math.pow(2,count++)+binaryToDecimal(binary/10);
     }
 
     /*private static int decimalToBinary(int decimal){
@@ -22,7 +29,7 @@ public class DecimalToBinary {
         return decimalToBinary(base);
     }*/
     public static void main(String[] args) {
-        System.out.println(decimalToBinary(10));
-      //  decimalToBinary(13);
+      System.out.println(decimalToBinary(34));
+      System.out.println(binaryToDecimal(100010));
     }
 }
