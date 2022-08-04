@@ -4,6 +4,9 @@ public class Permutation {
 
     //Permutation of each other
     private static boolean isPermutationOfEachOther(int[] arr1,int[] arr2){
+        if(arr1.length!=arr2.length){
+           return false;
+        }
          int sum1=0;
          int sum2=0;
          int product1=1;
